@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cabin", sans-serif;
+}
+
+body {
+  background-color: #181820;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fc76a1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #fafafa;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+
+.checkbox:checked + label {
+  text-decoration: line-through;
+  color: #d7e4ea87;
+}
+
+.mainContainer {
+  max-width: 35%;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 60px 0;
+  position: relative;
+  z-index: 10;
+}
+
+.mainHeading {
+  color: #d7e4ea;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.author,
+a {
+  color: #d7e4ea;
+  margin-top: 50px;
+}
+
+/* Medium screen */
+@media only screen and (max-width: 992px) and (min-width: 600px) {
+  .mainContainer {
+    max-width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 60px 0;
+    position: relative;
+    z-index: 10;
+  }
+
+  .mainHeading {
+    color: #d7e4ea;
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+/* Small screen */
+@media only screen and (max-width: 600px) {
+  .mainContainer {
+    max-width: 93%;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 60px 0;
+    position: relative;
+    z-index: 10;
+  }
+
+  .mainHeading {
+    color: #d7e4ea;
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+}

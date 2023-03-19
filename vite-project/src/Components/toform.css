@@ -1,0 +1,225 @@
+.formContainer {
+  display: flex;
+  justify-content: center;
+  gap: 3%;
+  width: 100%;
+  position: relative;
+}
+
+.editformContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 3%;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.inputWrapper,
+.editinputWrapper {
+  flex-basis: 85%;
+}
+
+.inputBtn,
+.editinputBtn {
+  flex-basis: 15%;
+}
+
+.input,
+.editinput {
+  width: 100%;
+  padding: 22px 20px;
+  border: 0;
+  background-color: #272732;
+  color: #d9d7ea;
+  font-size: 18px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.input:focus,
+.editinput:focus {
+  outline: 3px solid #fc76a1;
+}
+
+.input::placeholder,
+.editinput::placeholder {
+  color: #d9d7ea;
+  font-size: 20px;
+}
+
+.submitBtn,
+.editinputBtn {
+  width: 98%;
+  height: 100%;
+  background-color: #fc76a1;
+  border: 0;
+  border-radius: 6px;
+  color: #272732;
+  font-size: 25px;
+  cursor: pointer;
+  -webkit-animation: pulse 2s infinite;
+  animation: pulse512 1.5s infinite;
+}
+
+.editinputBtn {
+  padding: 18px 0;
+}
+
+.submitBtn:hover {
+  background-color: #c56080;
+}
+
+/* Task list/item styling */
+
+.tastList {
+  list-style: none;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.taskitems {
+  background-color: #21212b;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 20px;
+  border-left: 7px solid #fc76a1;
+  border-radius: 0px;
+}
+
+.tasklistitemtxt {
+  color: #d9d7ea;
+  font-size: 20px;
+  text-align: left;
+  cursor: pointer;
+  word-wrap: break-word;
+}
+
+.taskitemInner {
+  flex-basis: 80%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.btnGroup {
+  flex-basis: 20%;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+/* Checkbox styling */
+/* ***************************** */
+
+.checkbox {
+  height: 25px;
+  width: 25px;
+  accent-color: #fc76a1;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+/* button */
+
+@keyframes pulse512 {
+  0% {
+    box-shadow: 0 0 0 0 #fc76a1;
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+  }
+}
+
+.edit,
+.delete {
+  background-color: #fc76a1;
+  color: #272732;
+  font-size: 25px;
+  padding: 10px 13px;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.edit:hover,
+.delete:hover {
+  background-color: #c56080;
+  -webkit-animation: pulse 2s infinite;
+  animation: pulse512 1.5s infinite;
+}
+
+/* Edit to form */
+
+.editformConatainerMain {
+  background-color: #d9d7ea;
+  width: 100%;
+  padding: 60px 0;
+  position: absolute;
+  top: 9%;
+  z-index: 20;
+  border-radius: 6px;
+  box-shadow: #fc76a1 0px 22px 70px 4px;
+}
+
+.edittaskHeading {
+  color: #272732;
+  margin-bottom: 30px;
+}
+
+/* Responsive design */
+
+/* Small screen */
+@media only screen and (max-width: 600px) {
+  .input,
+  .editinput {
+    padding: 18px 20px;
+  }
+
+  .input::placeholder,
+  .editinput::placeholder {
+    font-size: 18px;
+  }
+
+  .submitBtn,
+  .editinputBtn {
+    font-size: 20px;
+  }
+
+  /* ****************************************************** */
+  .edit,
+  .delete {
+    font-size: 17px;
+    padding: 7px 10px;
+  }
+
+  .checkbox {
+    height: 20px;
+    width: 20px;
+  }
+
+  .taskitems {
+    padding: 30px 10px;
+    border-left: 5px solid #fc76a1;
+    gap: 10px;
+  }
+
+  .tasklistitemtxt {
+    font-size: 17px;
+  }
+
+  .taskitemInner {
+    gap: 10px;
+  }
+
+  .btnGroup {
+    gap: 10px;
+  }
+}
